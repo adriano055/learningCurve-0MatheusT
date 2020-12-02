@@ -15,4 +15,5 @@ Let's code! []s
 
 My first modification in the project was the addition of cssReset file that contains a css code to
 reset the layout of project.
-A added to a simple navBar to the main page with some buttons to change the content of the page.gi
+Added to the project a simple navBar to the main page with some buttons to change the content of the
+page.
