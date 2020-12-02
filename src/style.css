@@ -1,0 +1,20 @@
+body {
+  background-color: gray;
+}
+
+.navBar {
+  background-color: black;
+  height: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLink {
+  color: white;
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: gray;
+  margin: 0.5rem;
+}
