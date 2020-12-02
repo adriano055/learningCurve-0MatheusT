@@ -1,4 +1,5 @@
 #This project presents my learning curve since begining.
+
 ------------------------------------------------//--------------------------------------------------
 
 In the first time I've used to knowledge about git to make the structure's repository and the work-
@@ -15,5 +16,4 @@ Let's code! []s
 
 My first modification in the project was the addition of cssReset file that contains a css code to
 reset the layout of project.
-Added to the project a simple navBar to the main page with some buttons to change the content of the
-page.
+Added to the project a simple navBar to the main page with some links to others pages.
