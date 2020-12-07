@@ -14,6 +14,6 @@ Let's code! []s
 
 ------------------------------------------------//--------------------------------------------------
 
-My first modification in the project was the addition of cssReset file that contains a css code to
-reset the layout of project.
-Added to the project a simple navBar to the main page with some links to others pages.
+Added the first step of learning. The JavaScript Fundamentals.
+I decided divided the project into simple parts.
+Each part will be a topic of learning and will have your respectives files, like modules.
