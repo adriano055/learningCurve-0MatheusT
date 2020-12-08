@@ -44,6 +44,12 @@ a {
   color: white;
 }
 
+
+a:hover{
+  background-color: white;
+  color: black;
+}
+
 a.jsFundamentals {
   background-color: rgba(11, 69, 145, 0.534);
 }
