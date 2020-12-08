@@ -127,3 +127,32 @@ let soma4 = (a,b) => {    // O mesmo da função de cima
 let soma5 = (a,b) => a+b //arrow reduzida - válida apenas para uma linha de código
 let imprime1 = a => console.log(a) //arrow reduzida - se tiver só um parametro não precisa nem de parênteses
 imprime1("Opa")
+
+console.log("--------------------------------------------")
+console.log("Destructuring")
+
+//Object Destructuring
+const pessoa = {
+  nome: "Matheus",
+  sobrenome: "Tavares",
+  dataNasc: {
+    dia: 22,
+    mes: 11,
+    ano: 1995
+  }
+}
+
+let {nome, sobrenome} = pessoa
+
+let {dataNasc: {dia: diaNasc, mes: mesNasc, ano: anoNasc} } = pessoa
+
+console.log(nome, sobrenome)
+
+console.log(diaNasc)
+
+//Array Destructuring
+
+const [opa] = [10]
+let [num1, , num3, num4 = 5] = [1,2,3]
+
+console.log(num1,num3,num4)
