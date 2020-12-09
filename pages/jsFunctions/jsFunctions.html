@@ -19,6 +19,105 @@
       <h1>Here will be presented some Functions used in JS.</h1>
       <p>All structures was tested in console. To see the tests press <em><strong>f12</strong></em>.</p>
     
+      <p>
+        Functions are fundamental building blocks in JavaScript. A function is a procedure for
+        JavaScript - a set of instructions that perform a task or calculate a value. To use
+        a function, you must define it somewhere in the scope that you want to call it.
+      </p>
+
+      <div class="block">
+        <h3>Function Declaration</h3>
+          <pre><code>
+            function square(parameters) { 
+              declarations 
+            }
+          </code></pre>
+      </div>
+
+      <div class="block">
+        <h3>Variables Parameters</h3>
+          <pre><code>
+            function square() { 
+              acess param with arguments
+               
+            }
+
+            e.g. 
+
+            function variableParam() {
+              let sum1 = 0
+              for(i in arguments){
+                sum1 += arguments[i]
+              }
+              return sum1
+            }
+          </code></pre>
+          
+      </div>
+
+      <div class="block">
+        <h3>Default Parameter</h3>
+          <pre><code>
+            function square(parameter = valueDefault) { 
+              declarations 
+            }
+          </code></pre>
+      </div>
+
+      <div class="block">
+        <h3>Arrow Functions</h3>
+          <pre><code>
+            let dobro = function (a) {
+              return a*2
+            }
+
+            dobro = (a) => {
+              return a*2
+            }
+
+            dobro = a => a*2
+
+            hi = () => 'hello'
+          </code></pre>
+      </div>
+
+      <div class="block">
+        <h3>Closures</h3>
+          <pre><code>
+           function out(x) {
+              function in(y) {
+                 return x + y
+              }
+              return in;
+           }
+           fn_inside = out(3)
+           result = fn_inside(5)
+           
+           result1 = out(3)(5)
+          </code></pre>
+      </div>
+
+      <div class="block">
+        <h3>Factory Function</h3>
+          <pre><code>
+            function createPerson(){
+              return {
+                name: "aaa",
+                lastName: "aaaa"
+              }
+            }
+          </code></pre>
+      </div>
+
+      <div class="block">
+        <h3>IIFE - Function Imediatly Invocated</h3>
+          <pre><code>
+            (function name(param) {
+              declarations
+            })()
+          </code></pre>
+      </div>
+
       <form action="../../index.html">
         <button type="submit"> Home </button>
       </form>
