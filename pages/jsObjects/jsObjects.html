@@ -18,16 +18,76 @@
     <div class="mainBody">
       <h1>Here will be presented the concept of Objects in JS.</h1>
       <p>All structures was tested in console. To see the tests press <em><strong>f12</strong></em>.</p>
-    
+      <br>
+      <p>Object is a non-primitive data type in JavaScript. It is like any other variable, the only 
+        difference is that an object holds multiple values in terms of properties and methods. 
+        Properties can hold values of primitive data types and methods are functions.</p>
+      
+    <div class="block">
+    <h3>What's the estructure of an object?</h3>
+      <pre>
+        <code>
+          // Object initialiser or literal
+          { [ nameValuePair1[, nameValuePair2[, ...nameValuePairN] ] ] }
+
+          // Called as a constructor
+          new Object([value])
+        </code>
+      </pre>
+    </div>
+
+    <div class="block">
+      <h3>Access JavaScript Object Properties & Methods</h3>
+        <pre>
+          <code>
+            //Literal Form
+            var person = { 
+              firstName: "James", 
+              lastName: "Bond", 
+              age: 25, 
+              getFullName: function () { 
+                  return this.firstName + ' ' + this.lastName 
+              } 
+            };
+
+            person.firstName; // returns James
+            person.lastName; // returns Bond
+
+            person["firstName"];// returns James
+            person["lastName"];// returns Bond
+
+            person.getFullName();
+          </code>
+        </pre>
+      </div>
 
       <div class="block">
-        <h3>Function Declaration</h3>
-          <pre><code>
-            function square(parameters) { 
-              declarations 
-            }
-          </code></pre>
+        <h3>Object Constructor</h3>
+          <pre>
+            <code>
+              var person = new Object();
+
+              // Attach properties and methods to person object     
+              person.firstName = "James";
+              person["lastName"] = "Bond"; 
+              person.age = 25;
+              person.getFullName = function () {
+                      return this.firstName + ' ' + this.lastName;
+                  };
+
+              // access properties & methods 
+              person.firstName; // James
+              person.lastName; // Bond
+              person.getFullName(); // James Bond
+            </code>
+          </pre>
       </div>
+
+      <p> For more informations visit 
+        <a class="mdn" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object">
+        MDN web docs
+        </a>
+      </p>
       <form action="../../index.html">
         <button type="submit"> Home </button>
       </form>
