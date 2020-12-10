@@ -17,9 +17,11 @@ Let's code! []s
 Added the first step of learning. The JavaScript Fundamentals.
 I decided divided the project into simple parts.
 Each part will be a topic of learning and will have your respectives files, like modules.
+I use a simple page to write some instructions and in console was made some tests with 
+the subjects learned.
 
 ------------------------------------------------//--------------------------------------------------
 
-The first topic has an Introdution to the Fundamental's JavaScript.
-I use a simple page to write some instructions and in console was made some tests with 
-the subjects learned.
+Added the second step of learning. The JavaScript Control's Structures.
+Added the third step of learning. The JavaScript Functions.
+Added the Fourth step of learning. The JavaScript Objects.
