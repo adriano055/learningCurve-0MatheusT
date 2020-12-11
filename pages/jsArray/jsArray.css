@@ -38,3 +38,11 @@ code{
   justify-content: center;
   text-align: left;
 }
+
+.mdn {
+  color: black;
+}
+.mdn:hover{
+  background-color: rgb(218, 54, 42);
+  color: blue;
+}
