@@ -24,4 +24,6 @@ the subjects learned.
 
 Added the second step of learning. The JavaScript Control's Structures.
 Added the third step of learning. The JavaScript Functions.
-Added the Fourth step of learning. The JavaScript Objects.
+Added the Fourth step of learning. The JavaScript Objects and the last of them, The JavaScript Array.
+
+------------------------------------------------//--------------------------------------------------
