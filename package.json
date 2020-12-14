@@ -1,0 +1,23 @@
+{
+  "name": "learningcurve-0matheust",
+  "version": "1.0.0",
+  "description": "This project shows my grow up step by step.",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0MatheusT/learningCurve-0MatheusT.git"
+  },
+  "author": "Matheus Tavares Araujo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0MatheusT/learningCurve-0MatheusT/issues"
+  },
+  "homepage": "https://github.com/0MatheusT/learningCurve-0MatheusT#readme"
+}
