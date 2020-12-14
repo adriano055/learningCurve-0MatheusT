@@ -4,7 +4,10 @@
   "description": "This project shows my grow up step by step.",
   "main": "index.js",
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.21.0",
+=======
+>>>>>>> 11a853542b425ea099ab3200dd31df174344d728
     "lodash": "^4.17.20"
   },
   "devDependencies": {},
