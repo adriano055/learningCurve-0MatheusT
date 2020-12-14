@@ -53,7 +53,7 @@ console.log(conteudo)
 fs.readFileSync(caminho, 'utf-8', (err, conteudo) =>{
   const config = JSON.parse(conteudo)
   console.log(`${config.teste.teste2}:${config.teste.teste4}`)
-})
+}) //defino caminho e encoding
 
 //abrindo json diretamente sem precisar converter (node suporta isso só pra json, tem que especificar o .json)
 const configJson = require('./testeFs.json')
@@ -81,3 +81,43 @@ fs.writeFile(__dirname + '/arquivoEscritoComNode.json', JSON.stringify(obj2), (e
 //Biblioteca é diferente de framework
 //Biblioteca são funcionalidades - axios, lodash, jQuery...
 //Frameworks são as estruturas - Angular, GraphicL, Vue, Express ...
+
+//-----------------------------------------------
+//Tarefas automatizadas com node
+
+const schedule = require('node-schedule')
+
+const tarefaAuto1 = schedule.scheduleJob('*/5 * 13 ** 2', function() {
+  console.log("Executando Tarefa 1", new Date().getSeconds())
+})
+
+setTimeout(function(){
+  tarefaAuto1.cancel()
+  console.log("Tarefa Cancelada!")
+}, 20000)
+
+const regra = new schedule.RecurrenceRule() //tarefa em recorrencia
+regra.dayOfWeek = [new schedule.Range(1,5)]
+regra.hour = 12
+regra.second = 30
+
+const tarefaAuto2 = schedule.scheduleJob(regra, function() {
+  console.log("Executando Tarefa ", new Date().getSeconds())
+})
+
+//Entrada e saida - Digitar no terminal do node
+const anonimo = process.argv.indexOf('-a') !== -1
+//console.log(anonimo)
+
+if(anonimo) {
+  process.stdout.write("Fala anonimo")
+  process.exit()
+}else{
+  process.stdout.write("Informe seu nome: ")
+  process.stdin.on('data', data =>{
+    const nome = data.toString().replace('\n', '')
+
+    process.stdout.write(`Fala ${nome}!! \n`)
+    process.exit()
+  })
+}
