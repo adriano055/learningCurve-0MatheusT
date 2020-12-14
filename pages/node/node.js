@@ -52,5 +52,32 @@ console.log(conteudo)
 //Assincrono
 fs.readFileSync(caminho, 'utf-8', (err, conteudo) =>{
   const config = JSON.parse(conteudo)
-}) //defino caminho e encoding
-console.log(`${config.teste.teste2}:${config.teste.teste4}`)
+  console.log(`${config.teste.teste2}:${config.teste.teste4}`)
+})
+
+//abrindo json diretamente sem precisar converter (node suporta isso só pra json, tem que especificar o .json)
+const configJson = require('./testeFs.json')
+console.log(configJson.teste)
+
+//Lendo uma pasta normal
+
+fs.readdir(__dirname, (err, conteudo) =>{
+  console.log("Conteudo da pasta")
+  console.log(conteudo)
+})
+
+
+const obj2 = {
+  nome: 123,
+  cor: "teste"
+}
+
+//escrevendo arquivos com node.
+
+fs.writeFile(__dirname + '/arquivoEscritoComNode.json', JSON.stringify(obj2), (err) =>{
+  console.log(err || "Arquivo Salvo")
+})
+
+//Biblioteca é diferente de framework
+//Biblioteca são funcionalidades - axios, lodash, jQuery...
+//Frameworks são as estruturas - Angular, GraphicL, Vue, Express ...
