@@ -18,6 +18,46 @@
     <div class="mainBody">
       <h1>Here will be presented some concepts about ESNext.</h1>
       
+      <div class="block">
+        <h3>Spread/Rest Operator</h3>
+        <pre>
+          <code>
+            function sum(x, y, z) {
+              return x + y + z;
+            }
+            
+            const numbers = [1, 2, 3];
+            
+            console.log(sum(...numbers));
+            // expected output: 6
+            
+            console.log(sum.apply(null, numbers));
+            // expected output: 6
+            
+          </code>
+        </pre>
+      </div>
+
+      <div class="block">
+        <h3> A promise Structure</h3>
+        <pre>
+          <img src="../../src/img/promise.png" alt="Promise Image">
+        </pre>
+      </div>
+
+      <div class="block">
+        <h3>Async/Await</h3>
+        <pre>
+          <code>
+            class Waiter {
+              async wait() {
+                return await Promise.resolve(1);
+              }
+            }
+          </code>
+        </pre>
+      </div>
+
       <form action="../../index.html">
         <button type="submit"> Home </button>
       </form>

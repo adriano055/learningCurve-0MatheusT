@@ -29,3 +29,5 @@ Added the Fourth step of learning. The JavaScript Objects and the last of them, 
 ------------------------------------------------//--------------------------------------------------
 
 Added the Node topic with some informations and tests on console.
+Added the ESNext topic with some informations and tests on console.
+------------------------------------------------//--------------------------------------------------

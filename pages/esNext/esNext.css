@@ -38,3 +38,7 @@ code{
   justify-content: center;
   text-align: left;
 }
+
+img{
+  position: relative;
+}
