@@ -5,7 +5,35 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        body {
+            font-size: 80px;
+        }
+        .c1{
+            background-color: orange;
+-        }
+        .c2{
+            background-color: blue;
+-        }
+        .c3{
+            background-color: green;
+        }
+
+        div {
+            float: left;
+            padding-top: 100px;
+        }
+
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
+        }
     </style>
 </head>
 
@@ -13,6 +41,15 @@
     <div class="c1">1</div>
     <div class="c2">2</div>
     <div class="c3">3</div>
+
+    <div class="buttom" style="padding:0; margin:0; display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
 </body>
 
 </html>
