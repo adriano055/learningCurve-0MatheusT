@@ -13,13 +13,26 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
         }
     </style>
 </head>
 
 <body>
 
-    <p class='observacao'>Just remember!!!!</p>
+    <h1 class='observacao'>Just remember!!!!</h1>
 
     <br>
 
@@ -29,7 +42,7 @@
 
     <br><br><br>
 
-    <p>Priority</p>
+    <h1>Priority</h1>
 
     <br>
 
@@ -41,6 +54,17 @@
     <br><br><br>
 
     <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity" target="_blank"> More informations</a>
+
+    <br><br><br>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
 </body>
 
 </html>

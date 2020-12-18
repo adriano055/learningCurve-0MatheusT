@@ -3,15 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Herança</title>
+    <title>Inheritance</title>
     <style>
-        /* ... */
+        body{
+            text-align: center;
+            font-family: monospace;
+            border: solid 3px red;
+        }
+
+        div {
+            border: inherit; /*Inherit herança - div herda a pborda de body*/
+            border-color: green;
+            padding: inherit;
+            margin: 30px;
+            background-color: purple;
+            color: wheat;
+        }
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
+        }
+
     </style>
 </head>
 
 <body>
-    <h1>Herança</h1>
-    <div>Estou herdando</div>
+    <h1>Herance</h1>
+    <div>I am inheriting the font-family</div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
 </body>
 
 </html>

@@ -5,12 +5,58 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body{
+            font-size: 40px;
+            color: white;
+            background-color: coral;
+            text-align: center;
+
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        div.text {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        li {
+            background-color: purple;
+        }
+
+        div.text, span, li {
+            width: 50%;
+            width: 200px;
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+           /* display: block;
+            display: inline;*/
+            display: inline-block;
+        }
+
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
+        }
+
     </style>
 </head>
 
 <body>
-    <div>Texto 1</div>
+    <div class="text">Texto 1</div>
     <span>Texto 2</span>
     <span>Texto 3</span>
     <ul>
@@ -18,6 +64,15 @@
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
 </body>
 
 </html>
