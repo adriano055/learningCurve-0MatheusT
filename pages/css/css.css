@@ -6,3 +6,12 @@ body {
   border: none;
   box-sizing: border-box;
 }
+
+a {
+  color: black;
+}
+
+a:hover{
+  background-color: black;
+  color: white;
+}
