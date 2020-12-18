@@ -3,14 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Especificidade CSS</title>
+    <title>CSS Specificity</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        body {
+            background: linear-gradient(red,yellow);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <p class='observacao'>Olha essa observação!!!!</p>
+
+    <p class='observacao'>Just remember!!!!</p>
+
+    <br>
+
+    <p>1 - Tags with argument <em>!important</em> have priority on specificity</p>
+    <p>2 - Specified tags has priority than others</p>
+    <p>3 - The last processed has priority on the before</p>
+
+    <br><br><br>
+
+    <p>Priority</p>
+
+    <br>
+    
+    <p>1 - Inline</p>
+    <p>2 - ID</p>
+    <p>3 - Class, Pseudo-Class, attribute</p>
+    <p>4 - Element, Pseudo-Element</p>
+
+    <br><br><br>
+
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity" target="_blank"> More informations</a>
 </body>
 
 </html>
