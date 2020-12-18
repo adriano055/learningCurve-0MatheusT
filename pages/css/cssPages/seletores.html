@@ -6,7 +6,38 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        * {  /*Seletor universal = **/
+            margin: 0;
+            padding: 0;
+        }
+
+        #aninhado > section {  /*descendente direto*/
+            color: blue
+        }
+
+        p + ul { /*seletores adjacentes*/
+            color: red
+        }
+
+        p ~ ol {    /* dentro de um mesmo pai*/
+            color: yellow;
+        }
+
+        [feira] {   /*Seletor é uma propriedade*/
+            color: green;
+        }
+        
+        span:nth-child(1){   /*Primeiro filho da tag span*/
+            color: magenta;  
+        }
+
+        section > :nth-child(odd) {/*Todos os filhos pares(even) ou impares(odd)*/
+            color: peru
+        }
+
+        section > span:nth-of-type(2){ /*Pega o segundo elemento do tipo especifico, no caso span*/
+            color: black;
+        }
     </style>
 </head>
 
@@ -29,7 +60,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
