@@ -8,6 +8,18 @@
         body {
             background-color: aquamarine;       /*tag*/
         }
+
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
+        }
     </style>
     <link rel="stylesheet" href="css/externo.css">  <!--externo*-->
 </head>
@@ -16,9 +28,14 @@
     <h1>We can use css in diferents ways.</h1>
     <p>Intern, on tag style. Extern on file and Inline on the own tag.</p>
 
-    <form action="../css.html" style="display: flex; justify-content: center; margin-top: 20px;">
-        <button type="submit"> CSS </button>
-    </form>
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
 </body>
 
 </html>
