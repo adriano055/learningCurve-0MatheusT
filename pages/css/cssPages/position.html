@@ -5,7 +5,77 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static {
+            top: 100px;
+            left: 100px;
+            background-color: steelblue;
+        }
+
+        .fixed { /*forma absoluta*/
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 { /*leva em consideração o elemento anterior*/
+            position: relative;
+            left: 0px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 { /*passa por cima tanto do relativo quanto do estatico*/
+            position: absolute; 
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 { /*leva em consideração o elemento anterior*/
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategrey;
+        }
+
+        .absolute2 { /*passa por cima tanto do relativo quanto do estatico*/
+            position: absolute; 
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky { /*faz o bloco subir enquanto rola e fica no topo*/
+            position: -webkit-sticky; /*safari aceita só com isso*/
+            position: sticky;
+            background-color: pink;
+            color: black;
+            top: 10px;
+        }
+
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
+        }
+
     </style>
 </head>
 
@@ -21,6 +91,15 @@
 
     <div class="sticky">Sticky</div>
     <p style="padding-bottom: 2000px;">Opa</p>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
 </body>
 
 </html>
