@@ -3,10 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Flexbox #01</title>
+    <title>Flexbox </title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div {
+            font-size: 40px;
+            margin: 5px;
+            border: solid 5px dodgerblue;
+        }
+
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
+        }
+
+        .big {
+            font-size: 1,3em;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            flex-wrap: wrap; /* quebra a linha e continua na prox*/
+            flex-flow: row wrap; /* junção de flex direction com flex wrap = flex flow*/
+            height: 200%;
+            flex-flow: column-reverse wrap;
+            justify-content: center; 
+            align-items: center; /*Cross axis*/
+            align-content: center; /*Mais de uma linha no cross axis*/
+        }
+
     </style>
 </head>
 
@@ -23,6 +57,16 @@
         <div class="tag nolabel">9</div>
         <div class="tag nolabel">10</div>
     </div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
+    
     <script src="js/tag.js"></script>
 </body>
 
