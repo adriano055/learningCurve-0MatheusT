@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Working with Events #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>Elemento</div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../domManipulation.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> DOM </button>
+        </form>
+    </div>
+
+    <script>
+        const item = document.querySelector('div');
+        item.style.position = 'absolute'
+
+        item.onmousemove = e => {
+            item.style.cursor = 'move'
+            if(e.buttons) {
+                e.target.style.top = `${e.clientY - (item.clientHeight / 2)}px`
+                e.target.style.left = `${e.clientX - (item.clientWidth / 2)}px`
+            }
+        }
+        
+    </script>
+</body>

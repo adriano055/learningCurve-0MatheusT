@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecting elements #1</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../domManipulation.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> DOM </button>
+        </form>
+    </div>
+   
+   <script>              
+        document.getElementById('primeiro').classList.add('destaque');
+
+        const divs = document.getElementsByTagName('div') //retorna um html colection.
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+
+        const divArray = [...divs]
+        divArray.forEach(e => e.classList.add('destaque'));
+
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for(let e of ultimosElementos) {
+            e.classList.remove('destaque')
+        }
+        //Para iterar em cima do html colection, transfora em array, usa spread ou usa for.
+    </script>
+
+</body>
+</html>

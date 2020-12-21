@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Working with Events #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a href="https://google.com.br" onclick="navEm5(event)">Google</a>
+    </div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../domManipulation.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> DOM </button>
+        </form>
+    </div>
+    <script>
+        function navEm5(e) {
+            e.preventDefault() //faz o click esperar (não chama o evento imediato)
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+    </script>
+</body>
