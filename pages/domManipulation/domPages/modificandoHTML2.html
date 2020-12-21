@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='UTF-8'>
-    <title>Modificando HTML #02</title>
+    <title>Manipulating HTML #02</title>
     <link rel='stylesheet' href='css/estilo.css'>
 </head>
 
@@ -11,8 +11,26 @@
     <div>
         <p>Texto Inicial</p>
     </div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../domManipulation.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> DOM </button>
+        </form>
+    </div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+
+        div.innerHTML = "Substitui somente o conteúdo, preserva a div"
+        //div.outerHTML = "Substitui toda a div pelo que for passado."
+        div.insertAdjacentHTML('beforeBegin', "antes do elemento adc isso.\n")
+        div.insertAdjacentHTML('afterBegin', "depois do elemento adc isso.")
+        div.insertAdjacentHTML('afterEnd', "depois do fim do elemento adc isso.")
+
+        console.log(div.innerText) //pega apenas o texto do html
+
     </script>
 </body>
 

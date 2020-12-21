@@ -4,7 +4,7 @@
 
 <head>
     <meta charset='UTF-8'>
-    <title>Trabalhando com Eventos #03</title>
+    <title>Working with Events #03</title>
     <style>
         body {
             margin: 0;
@@ -44,8 +44,34 @@
         <div class="item">4</div>
     </div>
     <div class="direita" wm-dropzone></div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../domManipulation.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> DOM </button>
+        </form>
+    </div>
     <script>
-        // ...
+        const itens = document.querySelectorAll('[wm-dropzone] .item')
+        itens.forEach((item, index)=> {
+            item.draggable = true
+            item.id = item.id || `draggable-item-${index}`
+            item.ondragstart = e =>
+                e.dataTransfer.setData('item-id', e.target.id)
+        })
+
+        const dropzones = document.querySelectorAll(' [wm-dropzone]')
+        dropzones.forEach(dropzone => {
+            dropzone.ondragover = e => e.preventDefault()
+            dropzone.ondrop = function(e) {
+                const id = e.dataTransfer.getData('item-id')
+                const item = document.getElementById(id)
+                e.target.appendChild(item)
+            }
+        })
+
     </script>
 </body>
 
