@@ -1,0 +1,25 @@
+body {
+  background-color: rgba(49, 212, 16, 0.987);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+div .domPages {
+  border: 2px solid black;
+  margin: 0;
+  margin: 2px 150px 0px 150px;
+  background: linear-gradient(rgb(44, 38, 38), rgb(31, 26, 27));
+
+}
+
+a {
+  color: black;
+}
+
+a:hover{
+  background-color: black;
+  color: white;
+}

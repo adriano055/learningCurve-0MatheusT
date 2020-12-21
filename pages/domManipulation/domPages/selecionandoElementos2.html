@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecting Elements #02</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../domManipulation.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> DOM </button>
+        </form>
+    </div>
+    
+    <script>              
+        document.querySelector('#primeiro').classList.add('destaque');
+
+        const selecionar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'));
+            //queryselectorall retorna um nodeList
+        const desSelecionar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'));
+            //queryselectorall retorna um nodeList
+            //query selector busca o primeiro elemento que for solicitado
+
+        selecionar('.terceiro.ultimo');
+    </script>
+</body>
+</html>
