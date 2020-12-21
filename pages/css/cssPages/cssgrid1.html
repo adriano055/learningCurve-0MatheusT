@@ -22,6 +22,35 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        button {
+            border:1px solid #25692A;
+            border-radius:4px;
+            display:inline-block;
+            cursor:pointer;
+            font-family:Verdana;
+            font-weight:bold;
+            font-size:13px;
+            padding:6px 10px;
+            text-decoration:none;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(4,8.33%,8.33%);
+            grid-template-columns: repeat(12,8.33%);
+            grid-template-columns: repeat(11,100px) 100px;
+            grid-template-columns: 200px 20% 11fr;
+            grid-template-columns: 3fr 6fr 3fr;
+            grid-template-columns: 50% 25% 12.5%;
+            grid-template-columns: 100px 1fr;
+        }
+
+        .d8 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
     </style>
 </head>
 
@@ -38,6 +67,15 @@
     <div class="d10">10</div>
     <div class="d11">11</div>
     <div class="d12">12</div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../css.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> CSS </button>
+        </form>
+    </div>
 </body>
 
 </html>
