@@ -1,0 +1,25 @@
+body {
+  background-color: rgba(34, 109, 248, 0.323);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+div .ajaxPages {
+  border: 2px solid black;
+  margin: 0;
+  margin: 2px 150px 0px 150px;
+  background: linear-gradient(rgba(34, 109, 248, 0.323), rgb(102, 114, 104));
+
+}
+
+a {
+  color: black;
+}
+
+a:hover{
+  background-color: black;
+  color: white;
+}
