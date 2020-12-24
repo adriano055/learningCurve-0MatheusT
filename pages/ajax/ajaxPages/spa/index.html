@@ -21,10 +21,38 @@
 <body class="conteudo">
     <nav>
         <a href wm-link="series.html" wm-destino=".pagina">Séries</a> |
-        <a href wm-link="linguagens.html" wm-destino=".pagina">Linguagens</a>
+        <a href wm-link="linguagens.html" wm-destino=".pagina">Linguagens</a>  <!-- Navegações -->
     </nav>
     <div class="pagina"></div>
     <script>
-        // ...
+        function navegarViaAjax(url, seletor, push = true) { 
+            if(!url || !seletor) return
+            const elemento = document.querySelector(seletor) //A partir do setelor, pega o elemento
+            fetch(url)              //Usa o fecth em cima da urlx que recebeu como parametro
+                .then(resp => resp.text()) //pega o texto da requisição para iserir ele no html
+                .then(html => {
+                    elemento.innerHTML = html
+                    if(push) {
+                        history.pushState({ seletor }, "Página Ajax", url) //para guardar estados
+                    }                                           //no nosso caso, estamos guardando o
+                                                                //seletor e a url
+                })                                          //na definição da função chamamos o push
+        }
+
+        document.querySelectorAll('[wm-link]').forEach(link => { //Para cada elemento, insere um valor
+            const url = link.attributes['wm-link'].value
+            const seletorDestino = link.attributes['wm-destino'].value
+
+            link.onclick = e => {   //captura o evento do click no link
+                e.preventDefault()  //faz o link esperar a função que definimos (não muda de page imediatamente)
+                navegarViaAjax(url, seletorDestino) 
+            }
+        })
+
+        window.onpopstate = e => {  //complementa o push, para não guardar os dados na volta da page.
+            if(e.state) {           //setando o push para falso, para não guardar o status na nav via ajax
+                navegarViaAjax(window.location.href, e.state.seletor, false)
+            }
+        }
     </script>
 </body>

@@ -13,7 +13,32 @@
     <div id="get"></div>
     <div id="post"></div>
 
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../ajax.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> AJAX </button>
+        </form>
+    </div>
     <script>
-        // ...
+        function exibirResultado(id, dados) {
+            const texto = JSON.stringify(dados) //converte o objeto em json
+            document.getElementById(id).innerHTML = texto //dentro do elemento selecionado, insere.
+        }
+
+        // axios('parOuImpar?numero=10').then(resp => exibirResultado('get', resp.data))
+        
+        axios.get('parOuImpar', {
+            params: {
+                numero: 6
+            }
+        }).then(resp => exibirResultado('get', resp.data))
+
+        axios.post('formulario', {
+            nome: 'João',
+            sobrenome: 'Silva'
+        }).then(resp => exibirResultado('post', resp.data));
+
     </script>
 </body>
