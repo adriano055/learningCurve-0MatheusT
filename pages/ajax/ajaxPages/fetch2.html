@@ -28,7 +28,49 @@
         <button>Salvar</button>
     </form>
     <div id="resultado"></div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../ajax.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> AJAX </button>
+        </form>
+    </div>
     <script>
-        // ...
+
+        //Requisição post
+        //
+
+        document.usuarioForm.onsubmit = async e => {
+            e.preventDefault()
+
+            const form = e.target //o que disparou o evento
+            const data = new FormData(form)
+            data.append('ajax', true) //adcionando um novo elemento
+
+            const options = { //cirando um objeto e passando as configurações
+                method: form.method, //passa o metodo, que foi o post
+                body: new URLSearchParams(data) //passa os dados do objeto na submissão
+            }
+
+            const resultado = document.getElementById('resultado')
+            // fetch(form.action, options)
+            //     .then(resp => resp.json())
+            //     .then(json => {
+            //         resultado.innerHTML = JSON.stringify(json)   //Fetch com promise
+            //     })                                               
+            //     .catch(e => {
+            //         resultado.innerHTML = e
+            //     })
+            
+            try {
+                const resp = await fetch(form.action, options) //resolve e já retorna a resposta.
+                const json = await resp.json()
+                resultado.innerHTML = JSON.stringify(json)
+            } catch (e) {
+                resultado.innerHTML = e
+            }
+        }
     </script>
 </body>

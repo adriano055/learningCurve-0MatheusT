@@ -10,7 +10,32 @@
 <body class="conteudo exercicio">
     <h1>Estados</h1>
 
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../ajax.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> AJAX </button>
+        </form>
+    </div>
     <script>
-        // ...
+
+        //requisição get
+        //define a constante com o endereço
+        //chama o fetch, resolve os dados e retorna uma promisse.
+        //os dados não vem em json, tem de converter com a junção.json(), que retorna uma promisse.
+        //chama o reduce para efeturar a conversão.
+        //insere no html
+
+        const url = 'dados/estados.json'
+        fetch(url)
+            .then(resp => resp.json())
+            .then(estados => {
+                const itens = estados.reduce(
+                    (html, estado) => html + `<li>${estado.nome}</li>`, ''
+                )
+                document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
+            });
+
     </script>
 </body>

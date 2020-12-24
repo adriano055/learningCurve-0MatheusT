@@ -5,13 +5,31 @@
     <meta charset='UTF-8'>
     <title>Axios #01</title>
     <link rel='stylesheet' href='css/estilo.css'>
-    <script src="js/axios.js"></script>
+    <script src="js/axios.js"></script>  <!--  importado o axios -->
 </head>
 
 <body class="conteudo exercicio">
     <h1>Estados</h1>
 
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../ajax.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> AJAX </button>
+        </form>
+    </div>
     <script>
-        // ...
+        //axios já tem a resposta na requisição no objeto .data
+        //Diferente do fecth
+
+        const url = 'dados/estados.json'
+        axios(url).then(resp => {
+            const itens = resp.data.reduce(
+                (html, estado) => html + `<li>${estado.nome}</li>`, ''
+            )
+            document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
+        });
+
     </script>
 </body>
