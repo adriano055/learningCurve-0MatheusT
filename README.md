@@ -40,3 +40,11 @@ Added the HTML and CSS topics. The estructures have been used since the begin.
 Added the DOM Manipulation topic. In this topic was made a flappy bird project to practice some concepts.
 
 ------------------------------------------------//--------------------------------------------------
+
+Added the AJAX topic. 
+
+------------------------------------------------//--------------------------------------------------
+
+Added the GULP topic. As project was made a spa application with cod3r template.
+
+------------------------------------------------//--------------------------------------------------
