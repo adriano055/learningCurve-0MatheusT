@@ -1,0 +1,16 @@
+{
+  "name": "class-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "~4.8.1",
+    "webpack-cli": "~2.1.3"
+  }
+}
