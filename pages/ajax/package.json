@@ -2,7 +2,11 @@
   "name": "ajax",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
+  "main": "index.js",
+=======
   "main": "ajax.html",
+>>>>>>> ab0cecfff8b425afa95e457ca83845db7775bdaf
   "scripts": {
     "start": "nodemon server.js"
   },

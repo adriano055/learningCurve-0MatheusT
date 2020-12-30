@@ -1,5 +1,16 @@
 const bodyParser = require('body-parser')
 const express = require('express')
+<<<<<<< HEAD
+
+const app = express()
+
+app.use(express.static('.')) //dentro da pasta atual, sirva os arquivos estáticos.
+app.use(bodyParser.urlencoded({ extended: true})) //transforma os elementos em JSON
+app.use(bodyParser.json())
+
+app.get('/teste', (req, res) => res.send('Ok')) //Quando /teste for invocado com get, a função é chamada
+app.listen(8080, ()=> console.log('Executando server na porta 8080...'))
+=======
 const app = express()
 
 app.use(express.static('.')) //carrega links estáticos
@@ -47,3 +58,4 @@ app.get('/parOuImpar', (req, res) => {            //axios
 })
 
 app.listen(8080, () => console.log('Executando...')) //escutando na porta 8080
+>>>>>>> ab0cecfff8b425afa95e457ca83845db7775bdaf
