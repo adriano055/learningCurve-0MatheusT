@@ -12,9 +12,38 @@
     <h1>Manipulando CSS</h1>
     <div id='div1'>1</div>
     <div id='div2'>2</div>
-    <div id='div3'>3</div>
     <div id='resultado'></div>
+
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> jQuery </button>
+            </form>
+        </div>
+    </footer>
+
     <script>
-        // ...
+        
+        const fonte = $('#div1').css('font-family')  //lendo a fonte atual (pega via .css)
+        $('#resultado').append(`Fonte é ${fonte}`)  //Mostrando a fonte que o css pegou
+
+        $('#div1').css('font-size', '3em') //alterando otamanho da fonte
+        $('#div1').css({ 'font-size': '3.5em', 'color': 'yellow' }) //Alterando propriedades
+        $('#div1').css('font-size', function () { //Passando uma callback como propriedade
+            return `${2 * 2}em`
+        })
+
+        $('#div2').addClass('destaque') //adcionando nova classe (definida em estilo.css)
+
+        const temClasse = $('#div2').hasClass('destaque') //Verifica se classe está presente em elemento.
+        $('#resultado').append(`<br>Tem class? ${temClasse}`) //Adcionando em resultado.
+
+        $('#div2').removeClass('destaque') //Remove a classe
+        $('#div2').toggleClass('destaque') //Alterna - Se não tiver ele adc, se tiver ele remove.
+        $('#div2').toggleClass('destaque');
+
     </script>
 </body>

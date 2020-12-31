@@ -19,7 +19,53 @@
     <div id='cliques'>Cliques: 0</div>
     <input type="text" placeholder="Cor de Background">
 
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> jQuery </button>
+            </form>
+        </div>
+    </footer>
+
     <script>
-        // ...
+
+        function mostrarPosicaoMouse(e) { //recebe o evento como parametro
+            $('#posicao').html(`x: ${e.clientX} y: ${e.clientY}`) //atualiza o html com a pos do mouse
+        }
+
+        $('body').on('mousemove', mostrarPosicaoMouse) //att a pos de acordo de onde o mouse está
+        //função on registra o evento dentro do jquery
+        //atribuimos ao body a att do ponteiro
+        //mousemove é o evento
+        //segundo parametro é a função qeu queremos chamar
+        
+        $('#posicao').mouseover(e => { //quando mouse estiver em cima da div
+            $('body').off('mousemove', mostrarPosicaoMouse)     //a função vai ser inativada (.off)
+        })
+
+        $('#posicao').mouseleave(e => { //quando sair de cima da div
+            $('body').mousemove(mostrarPosicaoMouse) //registra novamente o evento (igual ao on)
+        })
+
+        let cliques = 0 //controle de clicks
+        $('body').click(e => { 
+            $('#cliques').html(`Cliques: ${++cliques}`) //incrementa o valor de clicks
+        })
+
+        const backgroundOriginal = $('body').css('background-color') //guarda bcg original
+
+        $('input').keyup(function (e) { //utilizando controles de teclado para alterar a cor de fundo
+            const valor = $(this).val() //pega o valor atual
+            if (valor.match(/#[\da-fA-F]{6}/)
+                || valor.match(/#[\da-fA-F]{3}/)) {
+                $('body').css('background-color', valor)    //verifica se a expressão regular passada em hexa
+            } else {                                        //é um valor válido
+                $('body').css('background-color', backgroundOriginal)
+            }
+        });
+
     </script>
 </body>

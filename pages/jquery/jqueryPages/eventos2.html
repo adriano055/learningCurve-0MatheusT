@@ -20,7 +20,40 @@
     <br>
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
+
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> jQuery </button>
+            </form>
+        </div>
+    </footer>
+
     <script>
-        // ...
+
+
+        const alternarDestaque = () => $('#div1').toggleClass('destaque') //altera entre classes
+        // $('#div1').on('mouseenter mouseleave', alternarDestaque) //mesma coisa do hover.
+        $('#div1').hover(alternarDestaque, alternarDestaque) //chama a função acima com o hover
+        //se não tiver segundo parametro, é chamada a função novamente quando sai.
+
+        $('#div1').one('mouseenter', e => alert('Aviso IMPORTANTE: Obrigado!')) //Evento aconte 1 única vez
+        $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000)) //doubleClick
+
+        $(window).resize(function(e) { //quando as dimensões da janela att, chama a função
+            const l = $(window).width()
+            const a = $(window).height()
+            $('#resultado1').html(`Largura: ${l} e Altura: ${a}`)
+        })
+
+        $(':input').select(e => {   //Quando seleciona uma parte de um texto
+            const inicio = e.target.selectionStart //pega início da seleção
+            const fim = e.target.selectionEnd   //pega fim da seleção
+            $('#resultado2').html(e.target.value.substring(inicio, fim)) //pega uma substring da seleção
+        });
+
     </script>
 </body>

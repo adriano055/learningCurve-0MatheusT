@@ -22,7 +22,28 @@
     <button>Iniciar</button>
     <div id='animar'>Animar!</div>
 
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> jQuery </button>
+            </form>
+        </div>
+    </footer>
+
     <script>        
-        // ...
+
+        $('button').click(e => { 
+            const t = 1500 //tempo da animação
+            // $('#animar').hide(t).show(t) //esconde e mostra com os clicks
+            $('#animar').toggle(t).toggle(t) //mesma coisa da de cima
+            // $('#animar').fadeOut(t).fadeIn(t) //aparecer, desaparecer
+            $('#animar').fadeToggle(t).fadeToggle(t) //mesma coisa da de cima
+            // $('#animar').slideUp(t).slideDown(t) //deslizar 
+            $('#animar').slideToggle(t).slideToggle(t) //mesmo de cima
+        });
+
     </script>
 </body>

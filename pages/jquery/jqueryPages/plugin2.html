@@ -12,7 +12,22 @@
     <h1>Plugin #02 - Temporizador</h1>
     <div></div>
     <script src="js/temporizador.js"></script>
+
+    <footer>
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> jQuery </button>
+        </form>
+    </footer>
+
     <script>
-        // ...
+
+        $('div').temporizador({ //chamada do temporizador. Está externo na pasta js
+            mensagem: 'Em breve um novo site pra você!',
+            horario: '18:10:30'
+        }).hide().fadeIn(3000);
+
     </script>
 </body>

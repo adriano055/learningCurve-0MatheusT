@@ -22,7 +22,56 @@
 <body class='conteudo exercicio'>
     <h1>Manipulando Atributos</h1>
     <div wm-relogio='1000'></div>
+    <div wm-relogio='3000'></div> <!-- Adicionando um segundo relógio -->
+
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> jQuery </button>
+            </form>
+        </div>
+    </footer>
     <script>
-        // ...
+        function Relogio(elemento) {    //Função construtora
+            const horaCerta = $('<p>').html('0')
+            const botaoMenos = $('<button>').html('-') //att relogio para frequencia menor
+            const botaoMais = $('<button>').html('+')  //att relogio para frequencia maior
+
+            const $elemento = $(elemento)   //Transforma o elemento recebido da DOM em elemento do jQuery
+            $elemento.append(horaCerta, botaoMenos, botaoMais) //Selecionou objs e adc na page
+
+            const getIntervaloAtual = //pega o intervalo atual e (atulização atual do relógio)
+                () => parseInt($elemento.attr('wm-relogio')) //pega o atributo utilizando jquery
+
+            let temporizador = null //resultado da função setInterval (substituido sempre que o tempo de att do rel atualizar)
+            const iniciar = () => { //testa o temporizador. Se vazio, limpa. Se não, seta novo intervalo
+                if (temporizador) clearInterval(temporizador)
+                temporizador = setInterval(() => {
+                    horaCerta.html(new Date().toLocaleString('pt-BR')) //cria a data atual e transforma para data do BR via html
+                }, getIntervaloAtual()) //passa o valor de att do relógio
+            }
+
+            const alterarIntervalo = delta => { //alterando o valor de atualização de acordo com botão
+                const novo = Math.max(getIntervaloAtual() + delta, 1000)
+                $elemento.attr('wm-relogio', novo) //altera o atributo de acordo com a atualização dos botões
+                iniciar() //chama a atualização de tempo
+            }
+
+            //altera o intervalo de acordo com os clicks
+            botaoMenos.click(e => alterarIntervalo(1000)) 
+            botaoMais.click(e => alterarIntervalo(-1000))
+            iniciar() //Inicializando a primeira vez
+        }
+
+        $('[wm-relogio]').each((i, e) => new Relogio(e)) //chama a função construtora para o atributo
+
+        //Acessando atributos diretamente
+        // $('[wm-relogio]').attr('opa') // ler
+        // $('[wm-relogio]').attr('opa', 3) // alterar ou incluir
+        $('[wm-relogio]').attr({ opa: 1, novo: true })
+        $('[wm-relogio]').removeAttr('opa').removeAttr('novo')
     </script>
 </body>
