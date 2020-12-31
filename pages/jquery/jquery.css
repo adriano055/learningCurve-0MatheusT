@@ -1,0 +1,25 @@
+body {
+  background-color: deepskyblue;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+div .jqueryPages {
+  border: 2px solid black;
+  margin: 0;
+  margin: 2px 150px 0px 150px;
+  background: linear-gradient(rgba(104, 195, 228, 0.405), rgb(102, 114, 104));
+
+}
+
+a {
+  color: black;
+}
+
+a:hover{
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div class="jq">1</div>
+    <div class="jq">2</div>
+
+    <div class="buttom" style="display: flex; justify-content: center;">
+        <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> HOME </button>
+        </form>
+        <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+            <button type="submit"> jQuery </button>
+        </form>
+    </div>
+
+    <script>
+        
+        $('div.jq').hide(5000).show(5000).fadeOut(5000) //passando um seletor como parâmetro do jquery
+        console.log($('div').get(1)) //método get pega o nó da DOM
+        console.log($.isEmptyObject({ nome: null })) //função utilitária
+        console.log(jQuery.inArray(3, [1, 2, 3])) //verifica se determinado valor está dentro do array
+
+        $.fn.fundoVerde = function () {
+            this.css('background-color', 'green')
+            return this //esse this faz o fadeOut estar disponível na função, pois retorna o 
+                        //próprio "obj" da DOM
+        }
+
+        $('div.jq').fundoVerde().fadeOut(1000);
+
+    </script>
+</body>

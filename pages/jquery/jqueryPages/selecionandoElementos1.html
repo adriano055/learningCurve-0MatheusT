@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Selecionando Elementos #01</title>
+    <link rel='stylesheet' href='./css/estilo.css'>
+    <script src='./js/jquery.js'></script>
+    <style>
+        .negrito {
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Selecionando Elementos #01</h1>
+    <div>
+        <p>Parágrafo
+            <span class='negrito'>dentro span</span>
+        </p>
+    </div>
+    <div>
+        <ul id='feira'>
+            <li>Arroz</li>
+            <li wm-obrigatorio>Feijão</li>
+            <li class='opcional'>Carne</li>
+            <li class='opcional'>Ovo</li>
+        </ul>
+    </div>
+    <form>
+        <input type='text' name='texto'>
+        <input type='password' name='senha'>
+        <input type='checkbox' name='check1'>
+        <input type='radio' name='radio1'>
+        <input type='file' name='arquivo'>
+    </form>
+
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="../jquery.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> jQuery </button>
+            </form>
+        </div>
+    </footer>
+
+    <script>
+
+        $('#feira').addClass('destaque').removeClass('destaque') //por id
+        $('li').addClass('destaque')                             //por elemento
+        $('[wm-obrigatorio]').removeClass('destaque')            //por atributo
+        $('li.opcional').removeClass('destaque')                 //por classe
+        $('div p span').addClass('destaque')                     //por descendente
+
+        // Exclusivos jQuery
+        $('li:first').css('border', 'solid 3px yellow')          //Primeiro elem. do tipo li
+        $('li:odd').css('border', 'solid 10px orange')           //Indices impares
+        $('li:gt(1)').css('border', 'solid 10px white')          //Maior que determinados indices
+        $('li:not(:last)').css('border', 'none')                 //Not - que não é
+        $('li:contains("r")').css('background-color', 'black')   //Verifica se contem
+
+        $('form *').show()              //Seletor universal - esconde todos.
+        $('form :text').show()          //Algum elemento de determinado tipo
+        $('form :password').show()      //Elemntos tipo senha
+        $('form :checkbox').show()      //checkbox
+        $('form :radio').show()         //radio
+        $('form :file').show()          //tipo file
+        $('div').show();
+        
+    </script>
+</body>

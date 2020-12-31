@@ -73,47 +73,55 @@ a.controlStructures {
   background-color: pink;
 }
 
-a.jsFunctions{
+a.jsFunctions {
   background-color: yellow;
 }
 
-a.jsObjects{
+a.jsObjects {
   background-color: rgb(97, 212, 74);
 }
 
-a.jsArray{
+a.jsArray {
   background-color: rgb(218, 54, 42);
 }
 
-a.node{
+a.node {
   background-color: rgba(208, 58, 208, 0.713);
 }
 
-a.esNext{
+a.esNext {
   background-color: rgba(255, 145, 0, 0.912);
 }
 
-a.webConcepts{
+a.webConcepts {
   background-color: rgba(18, 248, 149, 0.912);
 }
 
-a.html{
+a.html {
   background-color: rgba(225, 245, 40, 0.987);
 }
 
-a.css{
+a.css {
   background-color: rgba(245, 40, 160, 0.987);
 }
 
-a.domManipulation{
+a.domManipulation {
   background-color: rgba(49, 212, 16, 0.987);
 }
 
-a.ajax{
+a.ajax {
   background-color: rgba(34, 109, 248, 0.734);
   ;
 }
 
-a.gulp{
+a.gulp {
   background-color: rgba(252, 94, 9, 0.734);
+}
+
+a.webpack {
+  background-color: rgb(133, 126, 122);
+}
+
+a.jquery {
+  background-color: deepskyblue;
 }
