@@ -9,7 +9,7 @@ export default class Saudacao extends Component {  //criando um componente exten
     }
     
     constructor(props) { //inicializando o estado por uso de uma função construtora
-        super(props) //Mantem a compatibilidade (super)
+        super(props) //Mantem a compatibilidade (super - Construtor de Component)
         
         //dentro de construtor o this aponta para a instância de Saudacao
         this.setTipo = this.setTipo.bind(this) //o this dentro de bind vai ser o mesmo do componente Saudacao
