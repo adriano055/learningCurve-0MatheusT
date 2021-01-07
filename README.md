@@ -48,3 +48,21 @@ Added the AJAX topic.
 Added the GULP topic. As project was made a spa application with cod3r template.
 
 ------------------------------------------------//--------------------------------------------------
+
+Added the Webpack topic. 
+
+------------------------------------------------//--------------------------------------------------
+
+Added the jQuery topic. 
+
+------------------------------------------------//--------------------------------------------------
+
+Added the Bootstrap topic. Here it was made a project with Webpack, jQuery and Bootstrap.
+
+------------------------------------------------//--------------------------------------------------
+
+Added the Reac topic. It was made a simple calculator to learn.
+
+** From this on, all commit will be made following the Conventional Commits < https://www.conventionalcommits.org > **
+
+------------------------------------------------//--------------------------------------------------
