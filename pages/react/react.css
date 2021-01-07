@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(233, 233, 68);
+  background-color: deepskyblue;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -7,34 +7,19 @@ body {
   box-sizing: border-box;
 }
 
-p {
-  text-align: center;
-  padding: 0 6em 0 6em ;
-}
-
-div.block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+div .reactPages {
+  border: 2px solid black;
   margin: 0;
-  padding: 0;
+  margin: 2px 150px 0px 150px;
+  background: linear-gradient(rgba(104, 195, 228, 0.405), rgb(102, 114, 104));
+
 }
 
-pre {
-  font-style: italic;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 0;
-  padding-right: 7em;
-  border: 0.2em solid;
-  background-color: white;
-  width: 50%;
+a {
+  color: black;
 }
 
-code{
-  display: flex;
-  justify-content: center;
-  text-align: left;
+a:hover{
+  background-color: black;
+  color: white;
 }
