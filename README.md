@@ -61,8 +61,13 @@ Added the Bootstrap topic. Here it was made a project with Webpack, jQuery and B
 
 ------------------------------------------------//--------------------------------------------------
 
-Added the Reac topic. It was made a simple calculator to learn.
+Added the React topic. It was made a simple calculator to learn.
 
 ** From this on, all commit will be made following the Conventional Commits < https://www.conventionalcommits.org > **
+
+------------------------------------------------//--------------------------------------------------
+
+Added a subtopic to React. It was made a simple CRUD in React with a simple Json Server as backend.
+
 
 ------------------------------------------------//--------------------------------------------------
