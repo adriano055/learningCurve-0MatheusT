@@ -69,5 +69,4 @@ Added the React topic. It was made a simple calculator to learn.
 
 Added a subtopic to React. It was made a simple CRUD in React with a simple Json Server as backend.
 
-
 ------------------------------------------------//--------------------------------------------------
