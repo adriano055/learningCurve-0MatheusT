@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+
+    <div id="app"></div>
+
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="./index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> Vue </button>
+            </form>
+        </div>
+    </footer>
+
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                titulo: "VueJS",
+                subtitulo: "Framework Progressivo"
+            },
+            // Utilizando uma template string para inserir um elemento html.
+            // O template deve ser envolvido em tags
+            template: `
+                <div>
+                    <h1>{{ titulo }}</h1>
+                    <h3>{{ subtitulo }}</h3>
+                </div>
+            `
+        });
+
+    </script>
+</body>
+</html>

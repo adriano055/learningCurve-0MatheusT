@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Componente</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+
+    <div id="app">   
+        <saudacao nome="Ana"></saudacao>   <!-- Cahamando o componente -->
+        <saudacao nome="Bia"></saudacao>
+        <saudacao nome="Julia"></saudacao>
+    </div>
+
+    <footer>
+        <div class="buttom" style="display: flex; justify-content: center;">
+            <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> HOME </button>
+            </form>
+            <form action="./index.html" style="display: flex; justify-content: center; margin: 20px;">
+                <button type="submit"> Vue </button>
+            </form>
+        </div>
+    </footer>
+
+    <script>
+
+        // Quando se trabalha com componentes, tem que se trabalhar com data. 
+        // Componentes guardam o seu próprio estado.
+        Vue.component('saudacao', {
+            props: ['nome'],
+            template: `
+                <div>Bom dia {{ nome }}!</div>
+            `
+        })
+
+        // Inicializando a instância vue
+        new Vue({  
+            el: "#app"
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+        <p><a v-bind:href=" {{ link }} "></a></p> 
+        <p><a :href=" {{ link }}"></a></p> 
+    </div>                                  
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Google?</a></p>
+        <p><a v-bind:href="link">Google</a></p>      <!-- v-bind interpola o link do vue para ser usado com a diretiva v-bind -->
+        <p><a :href="link">Google</a></p>            <!-- : é a forma simplificada de fazer um binding-->
+        <p>                                         <!-- diretivas são propriedades personalizadas com o v- ...-->
+            <input type="text" v-model="nome"><br>  <!-- v-model faz a atualização em duas direções (two-way biding)-->
+            <span>{{ nome }}</span>
+        </p>
+
+        <footer>
+            <div class="buttom" style="display: flex; justify-content: center;">
+                <form action="../../../index.html" style="display: flex; justify-content: center; margin: 20px;">
+                    <button type="submit"> HOME </button>
+                </form>
+                <form action="./index.html" style="display: flex; justify-content: center; margin: 20px;">
+                    <button type="submit"> Vue </button>
+                </form>
+            </div>
+        </footer>
+    </div>
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "Maria",
+                link: "https://google.com.br"
+            },
+            watch: { //Atualiza em tempo real. Observador.
+                nome(novoValor) { //Sempre que atualizar o nome (Maria, no caso), a função é chamada
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
