@@ -137,3 +137,7 @@ a.react {
 a.vue {
   background-color: rgb(68, 233, 167);
 }
+
+a.angular {
+  background-color: hsl(264, 82%, 66%);
+}
