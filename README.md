@@ -67,6 +67,10 @@ Added the React topic. It was made a simple calculator to learn.
 
 ------------------------------------------------//--------------------------------------------------
 
-Added a subtopic to React. It was made a simple CRUD in React with a simple Json Server as backend.
+Added the subtopic to React. It was made a simple CRUD in React with a simple Json Server as backend.
 
 ------------------------------------------------//--------------------------------------------------
+Added the Vue topic. It was made a some projects in Vue to improve the learning.
+
+------------------------------------------------//--------------------------------------------------
+Added the Angular topic. It was made a crud project with with a simple Json Server as backend.

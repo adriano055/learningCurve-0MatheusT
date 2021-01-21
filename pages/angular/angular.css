@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(68, 233, 167);
+  background-color: hsl(264, 82%, 66%);
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -7,11 +7,11 @@ body {
   box-sizing: border-box;
 }
 
-div .vuePages {
+div .angularPages {
   border: 2px solid black;
   margin: 0;
   margin: 2px 150px 0px 150px;
-  background: linear-gradient(rgba(73, 226, 165, 0.405), rgb(102, 114, 104));
+  background: linear-gradient(rgba(65, 37, 177, 0.405), rgb(102, 114, 104));
 
 }
 
