@@ -22,7 +22,11 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void {
-    this.productService.showMessage("Realizada com sucesso")
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showMessage("Produto enviado!")
+      this.router.navigate(['/products'])
+    })
+
   }
 
   cancel(): void {

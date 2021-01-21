@@ -1,5 +1,7 @@
 .sidenav {
   width: 200px;
+  background-color: #333;
+  border: none;
 }
 
 .sidenav a {
