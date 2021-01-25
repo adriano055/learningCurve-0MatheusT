@@ -141,3 +141,11 @@ a.vue {
 a.angular {
   background-color: hsl(264, 82%, 66%);
 }
+
+a.mySQL {
+  background-color: hsl(0, 95%, 50%);
+}
+
+a.mongoDB {
+  background-color: hsl(117, 84%, 22%);
+}
