@@ -1,0 +1,26 @@
+body {
+  background-color: hsl(117, 84%, 22%);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+div .mySQLPages {
+  border: 2px solid black;
+  margin: 0;
+  margin: 2px 150px 0px 150px;
+  background: linear-gradient(rgba(54, 106, 2, 0.687), rgba(49, 49, 48, 0.333));
+
+}
+
+a {
+  color: black;
+}
+
+a:hover{
+  background-color: black;
+  color: white;
+}
+
