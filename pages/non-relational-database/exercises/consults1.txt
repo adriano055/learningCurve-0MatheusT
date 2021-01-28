@@ -1,0 +1,11 @@
+db.__.find() - busca todos os __ cadastrados numa Coleção
+db.__.find.pretty() - mostra em formato mais fácil para visualização
+
+db.__.findOne() - retorna o primeiro elemento
+db.__.findOne({sigla: "RJ"}) - busca pelo elemento passado
+db.__.find({$or: [{sigla: "RJ"}, {sigla: "AC"}]}).pretty() - Busca com o condicional ou (vieram os dois)
+db.__.find({populacao: {$exists: true}}).pretty() - Verifica se determinado atributo está contido ou não 
+db.__.find().skip(1).limit(2) - Faz consulta paginada. Limita a quantidade de informação
+db.__.count() - verifica quantos registros tem em determinada coleção
+db.__.find({sigla: "SP"}, {nome: 1, sigla: 1, _id: 0}) - Filtrando os atributos - 1 é true, 0 é false
+db.__.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0})

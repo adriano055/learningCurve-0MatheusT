@@ -1,0 +1,13 @@
+mongod - executa o mongodb como server
+mongo - executa o mongo no terminal
+help - ajuda e dicas
+
+show dbs - mostra todos os comandos disponíveis
+use - muda para um banco que já está criado ou muda para um que não foi criado ainda
+
+db.createCollection('estados') - Cria uma coleção de dados no banco selecionado.
+show collections - mostra as collections
+
+//Mongo é case sensitive estado !== Estado
+
+db.__.drop() - exclui a collection __
