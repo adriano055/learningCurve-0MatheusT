@@ -7,20 +7,18 @@ body {
   box-sizing: border-box;
 }
 
-div .mySQLPages {
+div .mongoDBPages {
   border: 2px solid black;
   margin: 0;
   margin: 2px 150px 0px 150px;
   background: linear-gradient(rgba(54, 106, 2, 0.687), rgba(49, 49, 48, 0.333));
-
 }
 
 a {
   color: black;
 }
 
-a:hover{
+a:hover {
   background-color: black;
   color: white;
 }
-
