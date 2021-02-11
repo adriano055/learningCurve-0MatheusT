@@ -1,153 +1,198 @@
+@font-face {
+	font-family: Arial-U;
+	src: url("./arial-unicode-ms.ttf");
+	font-style: normal;
+}
+
 body {
-  background-color: white;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
+	background-color: #77c9d4;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: Arial-U;
+	display: flex;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 200%;
 }
 
 .navBar {
-  background-color: black;
-  height: 5em;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border-bottom: 5px solid red;
+	background: rgb(91, 136, 181);
+	background: radial-gradient(circle, rgba(91, 136, 181, 1) 30%, rgba(119, 201, 212, 1) 100%);
+	color: #eeeeee;
+	display: flex;
+	flex-direction: column;
+	height: 50%;
+	border-bottom: 1px solid black;
 }
 
-div .steps {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+	text-align: center;
+	font-size: 4vw;
 }
 
-button {
-  border: 1px solid #25692a;
-  border-radius: 4px;
-  display: inline-block;
-  cursor: pointer;
-  font-family: Verdana;
-  font-weight: bold;
-  font-size: 13px;
-  padding: 6px 10px;
-  text-decoration: none;
+.title h1 {
+	width: 70vw;
 }
 
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-weight: bold;
-  width: 100%;
-  height: 3em;
-  color: white;
-  border: 1px solid black;
+.subtitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #eeeeee;
+	color: #8e8e8e;
+	height: 40vh;
+	text-align: center;
+	font-size: 1.2vw;
 }
 
-a:hover {
-  background-color: white;
-  color: black;
+.subtitle a {
+	height: 4vw;
+	width: 12vw;
+	background-color: #5b88b5;
+	color: #e2e2e2;
+	border-radius: 5px;
+
+	cursor: pointer;
+	margin-top: 1vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 
-a.jsFundamentals {
-  background-color: rgba(11, 69, 145, 0.534);
+.links {
+	height: 50%;
+	background: rgb(119, 201, 212);
+	background: linear-gradient(90deg, rgba(119, 201, 212, 1) 0%, rgba(91, 136, 181, 1) 50%, rgba(119, 201, 212, 1) 100%);
 }
 
-a.controlStructures {
-  background-color: pink;
+.links a {
+	text-decoration: none;
+	color: #8e8e8e;
 }
 
-a.jsFunctions {
-  background-color: yellow;
+.steps:hover img {
+	height: 90px;
+	width: 90px;
+	margin: 5px;
+	margin-right: 10px;
 }
 
-a.jsObjects {
-  background-color: rgb(97, 212, 74);
+.steps:hover {
+	background-color: rgb(78, 116, 155);
 }
 
-a.jsArray {
-  background-color: rgb(218, 54, 42);
+.links .text {
+	height: 15vh;
+	font-size: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #eee;
+	border-bottom: 1px solid black;
+	margin: 0px 7vw;
 }
 
-a.node {
-  background-color: rgba(208, 58, 208, 0.713);
+.links .box-links {
+	flex-wrap: wrap;
+	background-color: #ececec;
+	margin: 30px;
+	padding: 10px;
+	border-radius: 20px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-a.esNext {
-  background-color: rgba(255, 145, 0, 0.912);
+.steps {
+	display: flex;
+	margin: 10px;
+	background: rgb(91, 136, 181);
+	border-radius: 10px;
+	border: 1px solid rgb(61, 61, 61);
 }
 
-a.webConcepts {
-  background-color: rgba(18, 248, 149, 0.912);
+.steps a {
+	display: flex;
+	align-items: flex-start;
 }
 
-a.html {
-  background-color: rgba(225, 245, 40, 0.987);
+.steps span {
+	margin: 0px;
+	margin-top: 20px;
+	color: #eee;
+	font-size: 1.1rem;
+	margin-right: 10px;
 }
 
-a.css {
-  background-color: rgba(245, 40, 160, 0.987);
+img {
+	height: 80px;
+	width: 80px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: white;
+	margin-right: 15px;
 }
 
-a.domManipulation {
-  background-color: rgba(49, 212, 16, 0.987);
+@media (max-width: 980px) {
+	.links .box-links {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
-a.ajax {
-  background-color: rgba(34, 109, 248, 0.734);
+@media (max-width: 780px) {
+	.links .box-links {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
-a.gulp {
-  background-color: rgba(252, 94, 9, 0.734);
+@media (max-width: 580px) {
+	.links .box-links {
+		grid-template-columns: 1fr;
+	}
 }
 
-a.webpack {
-  background-color: rgb(133, 126, 122);
+@media (max-width: 320px) {
+	.steps > a > span {
+		font-size: 0.8rem;
+		margin-top: 10px;
+	}
+
+	img {
+		height: 50px;
+		width: 50px;
+		margin: 10px;
+		margin-right: 10px;
+	}
 }
 
-a.jquery {
-  background-color: deepskyblue;
-}
+@media (orientation: portrait) {
+	.title {
+		font-size: 6vw;
+	}
+	.subtitle {
+		font-size: 1.8vw;
+	}
 
-a.bootstrap {
-  background-color: darkred;
-}
+	.subtitle a {
+		height: 6vw;
+		width: 18vw;
+		font-size: 2vw;
+	}
 
-a.react {
-  background-color: rgb(233, 233, 68);
-}
-
-a.vue {
-  background-color: rgb(68, 233, 167);
-}
-
-a.angular {
-  background-color: hsl(264, 82%, 66%);
-}
-
-a.mySQL {
-  background-color: hsl(0, 95%, 50%);
-}
-
-a.mongoDB {
-  background-color: hsl(117, 84%, 22%);
-}
-
-a.express {
-  background-color: hsl(36, 98%, 57%);
+	.links .text {
+		font-size: 3vw;
+	}
 }
